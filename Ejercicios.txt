@@ -1,0 +1,67 @@
+UT9_TA6:
+
+
+
+1) Operaciones básicas:
+
+
+Insertar elementos en el APO "insertar"
+- Descripción: La operación de inserción coloca un nuevo elemento en el APO de tal manera que se mantiene la propiedad de parcialmente ordenado del árbol.
+ 
+- Operaciones básicas:
+
+  - Insertar el nuevo elemento en la posición libre más baja (hoja más a la derecha).
+
+  - Comparar el elemento insertado con su padre.
+
+  - Intercambiar el elemento con su padre si es menor, y repetir la comparación con el nuevo padre hasta que se mantenga la propiedad de parcial ordenación.
+
+
+ b. Extraer el elemento mínimo del APO "suprimeMinimo"
+
+- Descripción: La operación de extracción elimina el elemento en la raíz del APO (que es el mínimo en un min-heap) y reordena el árbol para mantener la propiedad de parcialmente ordenado.
+
+- Operaciones básicas:
+
+  - Reemplazar la raíz con el último elemento del árbol (hoja más a la derecha).
+
+  - Comparar la nueva raíz con sus hijos.
+
+  - Intercambiar la nueva raíz con el hijo menor si es mayor, y repetir la comparación con los nuevos hijos hasta que se mantenga la propiedad de parcialmente ordenado.
+
+
+2) Orden de las Operaciones en un Árbol Binario
+
+a. Insertar "insertar":
+-Operación: En un árbol binario, insertar un elemento implica colocar el nuevo elemento en una hoja y luego "flotar" el elemento hacia arriba si es necesario.
+
+- Complejidad: La altura de un árbol binario completo es O(log n) donde (n) es el número de elementos. Cada inserción puede requerir hasta O(log n) comparaciones e intercambios en el peor caso.
+
+- Orden: (O log n)
+
+ b. Extraer el elemento mínimo "suprimeMinimo"
+- Operación: En un árbol binario, la extracción del elemento mínimo implica colocar el último elemento en la raíz y luego "hundir" el elemento hacia abajo si es necesario.
+
+- Complejidad: cada extracción puede requerir hasta O(log n) comparaciones e intercambios en el peor caso.
+
+- Orden: O(log n)
+
+
+3) Orden de las Operaciones con el APO Representado mediante un Vector
+
+En la representación mediante un vector, el árbol binario se almacena en un arreglo donde para un nodo en la posición i , sus hijos están en las posiciones 2i y (2i +1).
+
+a. Insertar
+- Operación: Insertar un elemento implica colocarlo en la siguiente posición libre del vector y luego "flotarlo" hacia arriba usando comparaciones e intercambios.
+
+- Complejidad: Similar a la representación en forma APO cada inserción requiere hasta O(log n) comparaciones e intercambios.
+
+- Orden: O(log n) 
+
+b. Extraer el elemento mínimo "suprimeMinimo"
+
+- Operación: Extraer el elemento mínimo implica mover el último elemento del vector a la primera posición y luego "hundirlo" hacia abajo usando comparaciones e intercambios.
+
+- Complejidad: Similarmente, cada extracción requiere hasta O(log N) comparaciones e intercambios.
+
+- orden O(log n)
